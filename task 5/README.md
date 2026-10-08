@@ -35,10 +35,9 @@ This lab builds a steel-surface inspection prototype from Histogram of Oriented 
 10. [Industrial Deployment Discussion](#10-industrial-deployment-discussion)
 11. [Limitations](#11-limitations)
 12. [Conclusion](#12-conclusion)
-- [Bonus: Real-Time Inspection Interface](#bonus-real-time-inspection-interface)
 - [Appendix A: Lab Task Coverage](#appendix-a-lab-task-coverage)
 - [Appendix B: Repository Contents](#appendix-b-repository-contents)
-- [Appendix C: How to Reproduce](#appendix-c-how-to-reproduce)
+- [Appendix C: How to Run the Application](#appendix-c-how-to-run-the-application)
 - [Appendix D: References](#appendix-d-references)
 
 ---
@@ -707,31 +706,6 @@ Both models together are 12.24 MB, and one decision takes 50.9 ms on a CPU, so t
 
 HOG features with an RBF SVM identify the defect type of a NEU-DET image reliably (92.96% test accuracy, 92.89% macro-F1) but separate Normal from Defective 64x64 windows much less well (78.11% accuracy, AUC 87.13%), so window screening is the limiting stage of the two-stage decision module. Cell size had a larger effect than the number of orientation bins (Track A mean macro-F1 of 82.08%, 88.52% and 91.26% for 4, 8 and 16 pixel cells), and the models are fragile: noise sigma 10 and blur sigma 2 cost 39.90 and 67.13 macro-F1 points on Track A. The module rejected all 270 defective test images, but because no complete Normal image exists in the dataset, its false-reject rate on real strips is unknown and probably high. The most useful next step is to replace the box-free Normal windows with real defect-free strips, which would give a measurable false-reject rate, and to retrain with blur and noise augmentation.
 
----
-
-## Bonus: Real-Time Inspection Interface
-
-The two SVM models saved by the notebook (`models/`) drive a real-time prototype in [`interface/`](interface/). For every video frame it crops a square region of interest, converts it to grayscale, scans 25 windows with the Track B model, names the defect type with the Track A model, and shows **PASS** or **DEFECTIVE** with the confidence and a per-window heat overlay. A web interface (upload an image, use the webcam, or process a video file) and a command-line tool use the same inspection code.
-
-Quick start, from the `lab 5` folder:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate            # Windows: .venv\Scripts\activate
-pip install -r interface/requirements.txt
-
-python interface/realtime.py --source 0                   # webcam, OpenCV window
-python interface/realtime.py --source demo/conveyor_demo.mp4   # video file
-python interface/app.py                                   # web interface at http://127.0.0.1:7860
-python interface/inspect_cli.py path/to/image.png         # prints PRODUCT INSPECTION RESULT
-python interface/tools/make_demo_assets.py                # builds the demo video and sample images (needs internet)
-pytest interface/tests -q                                 # parity tests against the notebook's results
-```
-
-The prototype shows the mechanics (HOG on every frame, two-stage decision, live overlay). It is **not** a validated production system: the models were trained on NEU images only, so a webcam pointed at other scenes gives meaningless decisions, and the robustness limits in Section 9 apply (focus, noise, orientation, exposure). Usage details, measured frame rates and screenshots are in [`interface/README.md`](interface/README.md).
-
----
-
 ## Appendix A: Lab Task Coverage
 
 | Brief task | Where | Evidence |
@@ -749,37 +723,32 @@ The prototype shows the mechanics (HOG on every frame, two-stage decision, live 
 | 11. Effect of cell size and orientations | Section 8.1 | cell sizes 4, 8, 16 x orientations 6, 9, 12, Figure 8 |
 | 12. Robustness (brightness, noise, rotation, blur) | Section 9 | 4 conditions x 4 severities, change in accuracy and F1 |
 | 13. Quality-control decision module | Section 10 | `PRODUCT INSPECTION RESULT` outputs |
-| Bonus: real-time prototype | Bonus section | `interface/` |
 
 ## Appendix B: Repository Contents
 
 ```
-lab 5/
+task 5/
 ├── README.md
 ├── NEU_SteelDefect_Lab05_HOG_Inspection.ipynb    executed notebook (outputs included)
+├── app.py                                        Streamlit web application
 ├── assets/                                       figures used in this README
-├── models/
-│   ├── 6class__svm_rbf.joblib                    Track A SVM (10.35 MB)
-│   ├── binary__svm_rbf.joblib                    Track B SVM (1.89 MB)
-│   └── inspection_config.json                    HOG settings, window size, threshold, library versions
-├── results/
-│   ├── sweep_results.csv                         HOG parameter study
-│   ├── tuning_results.csv                        classifier tuning
-│   ├── comparison_results.csv                    test-set comparison
-│   ├── robustness_results.csv                    robustness study
-│   ├── results_summary.json
-│   └── extras.json                               split, predictions, calibrated scores
-└── interface/                                    real-time prototype (see Bonus)
+└── models/
+    ├── 6class__svm_rbf.joblib                    Track A SVM (10.35 MB)
+    ├── binary__svm_rbf.joblib                    Track B SVM (1.89 MB)
+    └── inspection_config.json                    HOG settings, window size, threshold, library versions
 ```
 
-## Appendix C: How to Reproduce
+## Appendix C: How to Run the Application
 
-1. Open the notebook in Google Colab. Any runtime works; nothing uses the GPU.
-2. Run all cells and allow the Google Drive prompt. The dataset is downloaded with `kagglehub.dataset_download("sovitrath/neu-steel-surface-defect-detect-trainvalid-split")`.
-3. Results, models and figures are saved to `MyDrive/Lab05_NEU_HOG/run_<id>/`, where `<id>` is a hash of the notebook's CONFIG (`37c9b548` for this run).
-4. If Colab disconnects, reconnect and run all cells again. Finished steps are loaded from Drive and skipped.
+The application is built using Streamlit. To run the app, ensure you have the required dependencies installed and run:
 
-All random choices use seed 42.
+```bash
+python3.10 -m streamlit run app.py
+```
+
+Upload a steel surface image in the web interface to see the inspection results.
+
+*(Note: The `app.py` script automatically loads the models from the `models/` directory and scans the image using HOG features.)*
 
 ## Appendix D: References
 
