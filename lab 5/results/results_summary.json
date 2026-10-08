@@ -1,0 +1,104 @@
+{
+ "run_id": "37c9b548",
+ "images": 1800,
+ "split": {
+  "train": 1260,
+  "val": 270,
+  "test": 270
+ },
+ "windows": {
+  "total": 5741,
+  "normal": 2624,
+  "defective": 3117
+ },
+ "best_hog": {
+  "track_a": {
+   "cell": 16,
+   "orient": 12,
+   "dim": 2352,
+   "f1_mean": 0.9223319691236211,
+   "top_cell": 16,
+   "top_orient": 12,
+   "top_f1": 0.9223319691236211
+  },
+  "track_b": {
+   "cell": 16,
+   "orient": 6,
+   "dim": 216,
+   "f1_mean": 0.774100832983019,
+   "top_cell": 16,
+   "top_orient": 12,
+   "top_f1": 0.7784122583830025
+  }
+ },
+ "test_svm_rbf": {
+  "track_a": {
+   "acc": 92.96,
+   "prec": 92.99,
+   "rec": 92.96,
+   "f1": 92.89
+  },
+  "track_b": {
+   "acc": 78.11,
+   "prec_def": 81.72,
+   "rec_def": 77.94,
+   "f1_def": 79.78,
+   "auc": 87.13
+  }
+ },
+ "end_to_end": {
+  "images": 270,
+  "detection_rate": 1.0,
+  "missed": 0,
+  "type_accuracy_of_rejected": 0.9296296296296296,
+  "normal_windows": 383,
+  "normal_accept_rate": 0.7545691906005222,
+  "latency_ms_per_image": 50.85840048613372
+ },
+ "robustness_svm_rbf_worst_case": {
+  "6class": {
+   "brightness": {
+    "worst_level": "gain x1.5",
+    "worst_d_F1": -25.18,
+    "worst_d_accuracy": -24.81
+   },
+   "noise": {
+    "worst_level": "sigma 40",
+    "worst_d_F1": -86.22,
+    "worst_d_accuracy": -75.19
+   },
+   "rotation": {
+    "worst_level": "90 deg",
+    "worst_d_F1": -55.66,
+    "worst_d_accuracy": -53.7
+   },
+   "blur": {
+    "worst_level": "sigma 5",
+    "worst_d_F1": -88.13,
+    "worst_d_accuracy": -76.3
+   }
+  },
+  "binary": {
+   "brightness": {
+    "worst_level": "gain x0.5",
+    "worst_d_F1": -6.03,
+    "worst_d_accuracy": -4.54
+   },
+   "noise": {
+    "worst_level": "sigma 40",
+    "worst_d_F1": -59.48,
+    "worst_d_accuracy": -32.01
+   },
+   "rotation": {
+    "worst_level": "90 deg",
+    "worst_d_F1": -7.26,
+    "worst_d_accuracy": -8.73
+   },
+   "blur": {
+    "worst_level": "sigma 2",
+    "worst_d_F1": -8.54,
+    "worst_d_accuracy": -22.7
+   }
+  }
+ }
+}

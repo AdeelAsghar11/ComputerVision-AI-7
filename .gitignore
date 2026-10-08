@@ -1,1 +1,7 @@
 .claude/
+
+lab 5/_inbox/
+lab 5/.venv/
+lab 5/captures/
+lab 5/**/__pycache__/
+lab 5/demo/*.mp4

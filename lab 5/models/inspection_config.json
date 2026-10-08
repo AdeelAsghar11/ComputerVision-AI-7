@@ -1,0 +1,40 @@
+{
+ "run_id": "37c9b548",
+ "classes": [
+  "crazing",
+  "inclusion",
+  "patches",
+  "pitted_surface",
+  "rolled-in_scale",
+  "scratches"
+ ],
+ "binary_classes": [
+  "Normal",
+  "Defective"
+ ],
+ "img_size": 128,
+ "win_size": 64,
+ "scan_stride": 34,
+ "reject_threshold": 0.5,
+ "hog_track_a": {
+  "cell": 16,
+  "orient": 12,
+  "block": 2,
+  "block_norm": "L2-Hys"
+ },
+ "hog_track_b": {
+  "cell": 16,
+  "orient": 6,
+  "block": 2,
+  "block_norm": "L2-Hys"
+ },
+ "model_track_a": "6class__svm_rbf.joblib",
+ "model_track_b": "binary__svm_rbf.joblib",
+ "preprocessing": "grayscale; Track A: cv2.resize to img_size x img_size with INTER_AREA; Track B: native-resolution 64x64 windows",
+ "versions": {
+  "sklearn": "1.6.1",
+  "skimage": "0.25.2",
+  "numpy": "2.1.3",
+  "opencv": "4.14.0"
+ }
+}
