@@ -1,0 +1,99 @@
+{
+ "run_id": "9fb91e8d",
+ "photos": 108,
+ "landmarks": [
+  "Angkor Wat",
+  "Big Ben",
+  "Burj Khalifa",
+  "Hagia Sophia",
+  "Leaning Tower of Pisa",
+  "Petra Treasury",
+  "Sydney Opera House"
+ ],
+ "thresholds": {
+  "t_good": 12,
+  "t_inliers": 6,
+  "margin": 1.5
+ },
+ "calibration": {
+  "tpr": 0.23214285714285715,
+  "wrong_rate": 0.0,
+  "unknown_accept": 0.0
+ },
+ "test": {
+  "known_queries": 28,
+  "known_correct": 5,
+  "known_wrong": 0,
+  "known_rejected": 23,
+  "unknown_queries": 12,
+  "unknown_rejected": 11,
+  "unknown_accepted": 1,
+  "overall_correct": 16,
+  "overall": 40,
+  "mean_time_s": 2.8807500000000004
+ },
+ "rules": {
+  "A: largest match count wins": {
+   "known_recognised_pct": 42.9,
+   "wrong_name_pct": 57.1,
+   "known_rejected_pct": 0.0,
+   "unknown_accepted_pct": 100.0
+  },
+  "B: reliable matches >= 84": {
+   "known_recognised_pct": 3.6,
+   "wrong_name_pct": 3.6,
+   "known_rejected_pct": 92.9,
+   "unknown_accepted_pct": 0.0
+  },
+  "C: our rule (matches + RANSAC + margin)": {
+   "known_recognised_pct": 17.9,
+   "wrong_name_pct": 0.0,
+   "known_rejected_pct": 82.1,
+   "unknown_accepted_pct": 8.3
+  }
+ },
+ "task6_by_condition": {
+  "brightness x0.4": {
+   "tests": 7,
+   "correct": 2,
+   "mean_inliers": 19.57,
+   "mean_time_s": 1.76
+  },
+  "different viewpoint": {
+   "tests": 7,
+   "correct": 2,
+   "mean_inliers": 16.43,
+   "mean_time_s": 2.92
+  },
+  "original": {
+   "tests": 7,
+   "correct": 1,
+   "mean_inliers": 31.29,
+   "mean_time_s": 3.08
+  },
+  "resized 50%": {
+   "tests": 7,
+   "correct": 1,
+   "mean_inliers": 18.43,
+   "mean_time_s": 1.83
+  },
+  "rotated 45 deg": {
+   "tests": 7,
+   "correct": 1,
+   "mean_inliers": 31.0,
+   "mean_time_s": 3.44
+  },
+  "unknown landmark": {
+   "tests": 2,
+   "correct": 2,
+   "mean_inliers": 8.0,
+   "mean_time_s": 4.1
+  }
+ },
+ "mean_time_ms": {
+  "sift": 161.3,
+  "match": 2627.2,
+  "ransac": 92.3,
+  "total": 2880.8
+ }
+}
