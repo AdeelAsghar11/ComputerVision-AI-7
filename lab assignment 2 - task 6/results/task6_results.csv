@@ -1,0 +1,38 @@
+landmark,condition,query,predicted,keypoints,reliable_matches,ransac_inliers,decision,correct,time_s
+Angkor Wat,original,angkor_wat_09.jpg,(rejected),1500,53,7,REJECTED,no,3.26
+Angkor Wat,rotated 45 deg,angkor_wat_09.jpg,(rejected),1500,49,7,REJECTED,no,3.35
+Angkor Wat,resized 50%,angkor_wat_09.jpg,Burj Khalifa,1500,44,9,RECOGNIZED,no,3.09
+Angkor Wat,brightness x0.4,angkor_wat_09.jpg,(rejected),1275,42,7,REJECTED,no,2.82
+Angkor Wat,different viewpoint,angkor_wat_11.jpg,(rejected),705,27,6,REJECTED,no,1.61
+Big Ben,original,big_ben_09.jpg,(rejected),1500,47,10,REJECTED,no,3.18
+Big Ben,rotated 45 deg,big_ben_09.jpg,(rejected),1500,47,10,REJECTED,no,3.3
+Big Ben,resized 50%,big_ben_09.jpg,(rejected),623,19,5,REJECTED,no,1.35
+Big Ben,brightness x0.4,big_ben_09.jpg,(rejected),814,34,8,REJECTED,no,1.78
+Big Ben,different viewpoint,big_ben_11.jpg,(rejected),1383,52,7,REJECTED,no,2.98
+Burj Khalifa,original,burj_khalifa_09.jpg,(rejected),1500,40,6,REJECTED,no,3.17
+Burj Khalifa,rotated 45 deg,burj_khalifa_09.jpg,(rejected),1500,71,6,REJECTED,no,3.46
+Burj Khalifa,resized 50%,burj_khalifa_09.jpg,(rejected),1014,29,5,REJECTED,no,2.19
+Burj Khalifa,brightness x0.4,burj_khalifa_09.jpg,(rejected),1088,39,7,REJECTED,no,2.41
+Burj Khalifa,different viewpoint,burj_khalifa_12.jpg,(rejected),1500,37,6,REJECTED,no,3.22
+Hagia Sophia,original,hagia_sophia_09.jpg,Hagia Sophia,1500,210,175,RECOGNIZED,yes,3.08
+Hagia Sophia,rotated 45 deg,hagia_sophia_09.jpg,Hagia Sophia,1500,222,172,RECOGNIZED,yes,3.31
+Hagia Sophia,resized 50%,hagia_sophia_09.jpg,Hagia Sophia,609,106,92,RECOGNIZED,yes,1.24
+Hagia Sophia,brightness x0.4,hagia_sophia_09.jpg,Hagia Sophia,684,107,93,RECOGNIZED,yes,1.53
+Hagia Sophia,different viewpoint,hagia_sophia_12.jpg,(rejected),1500,21,6,REJECTED,no,3.12
+Leaning Tower of Pisa,original,leaning_tower_of_pisa_09.jpg,(rejected),1500,42,7,REJECTED,no,3.12
+Leaning Tower of Pisa,rotated 45 deg,leaning_tower_of_pisa_09.jpg,(rejected),1500,44,8,REJECTED,no,3.3
+Leaning Tower of Pisa,resized 50%,leaning_tower_of_pisa_09.jpg,(rejected),1154,32,7,REJECTED,no,2.71
+Leaning Tower of Pisa,brightness x0.4,leaning_tower_of_pisa_09.jpg,(rejected),1119,32,8,REJECTED,no,2.47
+Leaning Tower of Pisa,different viewpoint,leaning_tower_of_pisa_11.jpg,Leaning Tower of Pisa,1500,56,15,RECOGNIZED,yes,3.24
+Petra Treasury,original,petra_treasury_09.jpg,(rejected),1194,87,8,REJECTED,no,2.62
+Petra Treasury,rotated 45 deg,petra_treasury_09.jpg,(rejected),1500,211,8,REJECTED,no,3.59
+Petra Treasury,resized 50%,petra_treasury_09.jpg,(rejected),429,33,6,REJECTED,no,1.01
+Petra Treasury,brightness x0.4,petra_treasury_09.jpg,(rejected),217,16,6,REJECTED,no,0.55
+Petra Treasury,different viewpoint,petra_treasury_10.jpg,Petra Treasury,1500,81,66,RECOGNIZED,yes,3.14
+Sydney Opera House,original,sydney_opera_house_09.jpg,(rejected),1500,25,6,REJECTED,no,3.15
+Sydney Opera House,rotated 45 deg,sydney_opera_house_09.jpg,(rejected),1501,105,6,REJECTED,no,3.79
+Sydney Opera House,resized 50%,sydney_opera_house_09.jpg,(rejected),363,9,5,REJECTED,no,1.22
+Sydney Opera House,brightness x0.4,sydney_opera_house_09.jpg,Sydney Opera House,345,13,8,RECOGNIZED,yes,0.77
+Sydney Opera House,different viewpoint,sydney_opera_house_10.jpg,(rejected),1500,48,9,REJECTED,no,3.11
+Eiffel Tower (not in database),unknown landmark,eiffel_tower_01.jpg,(rejected),1500,28,8,REJECTED,yes,3.21
+Great Pyramid of Giza (not in database),unknown landmark,great_pyramid_of_giza_01.jpg,(rejected),1500,45,8,REJECTED,yes,4.98

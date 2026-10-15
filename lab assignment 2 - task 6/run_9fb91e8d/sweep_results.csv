@@ -1,0 +1,141 @@
+family,value,landmark,correct,own_inliers
+rotation,0.0,Angkor Wat,False,0
+rotation,0.0,Big Ben,False,10
+rotation,0.0,Burj Khalifa,False,0
+rotation,0.0,Hagia Sophia,True,175
+rotation,0.0,Leaning Tower of Pisa,False,7
+rotation,0.0,Petra Treasury,False,7
+rotation,0.0,Sydney Opera House,False,6
+rotation,15.0,Angkor Wat,False,0
+rotation,15.0,Big Ben,False,0
+rotation,15.0,Burj Khalifa,False,8
+rotation,15.0,Hagia Sophia,True,167
+rotation,15.0,Leaning Tower of Pisa,False,5
+rotation,15.0,Petra Treasury,False,7
+rotation,15.0,Sydney Opera House,False,9
+rotation,30.0,Angkor Wat,False,0
+rotation,30.0,Big Ben,False,10
+rotation,30.0,Burj Khalifa,False,7
+rotation,30.0,Hagia Sophia,True,167
+rotation,30.0,Leaning Tower of Pisa,False,8
+rotation,30.0,Petra Treasury,False,8
+rotation,30.0,Sydney Opera House,False,0
+rotation,45.0,Angkor Wat,False,0
+rotation,45.0,Big Ben,False,9
+rotation,45.0,Burj Khalifa,False,6
+rotation,45.0,Hagia Sophia,True,172
+rotation,45.0,Leaning Tower of Pisa,False,8
+rotation,45.0,Petra Treasury,False,8
+rotation,45.0,Sydney Opera House,False,0
+rotation,60.0,Angkor Wat,False,0
+rotation,60.0,Big Ben,False,7
+rotation,60.0,Burj Khalifa,False,6
+rotation,60.0,Hagia Sophia,True,158
+rotation,60.0,Leaning Tower of Pisa,False,8
+rotation,60.0,Petra Treasury,False,0
+rotation,60.0,Sydney Opera House,False,0
+rotation,90.0,Angkor Wat,False,0
+rotation,90.0,Big Ben,False,8
+rotation,90.0,Burj Khalifa,False,0
+rotation,90.0,Hagia Sophia,True,163
+rotation,90.0,Leaning Tower of Pisa,False,8
+rotation,90.0,Petra Treasury,False,7
+rotation,90.0,Sydney Opera House,False,0
+rotation,135.0,Angkor Wat,False,0
+rotation,135.0,Big Ben,False,9
+rotation,135.0,Burj Khalifa,False,7
+rotation,135.0,Hagia Sophia,True,162
+rotation,135.0,Leaning Tower of Pisa,True,9
+rotation,135.0,Petra Treasury,False,8
+rotation,135.0,Sydney Opera House,False,0
+rotation,180.0,Angkor Wat,False,0
+rotation,180.0,Big Ben,False,8
+rotation,180.0,Burj Khalifa,False,0
+rotation,180.0,Hagia Sophia,True,172
+rotation,180.0,Leaning Tower of Pisa,False,7
+rotation,180.0,Petra Treasury,False,7
+rotation,180.0,Sydney Opera House,False,0
+scale,0.25,Angkor Wat,False,0
+scale,0.25,Big Ben,False,4
+scale,0.25,Burj Khalifa,False,0
+scale,0.25,Hagia Sophia,True,43
+scale,0.25,Leaning Tower of Pisa,False,0
+scale,0.25,Petra Treasury,False,0
+scale,0.25,Sydney Opera House,False,0
+scale,0.35,Angkor Wat,False,0
+scale,0.35,Big Ben,False,5
+scale,0.35,Burj Khalifa,False,5
+scale,0.35,Hagia Sophia,True,51
+scale,0.35,Leaning Tower of Pisa,False,8
+scale,0.35,Petra Treasury,False,6
+scale,0.35,Sydney Opera House,False,0
+scale,0.5,Angkor Wat,False,0
+scale,0.5,Big Ben,False,0
+scale,0.5,Burj Khalifa,False,0
+scale,0.5,Hagia Sophia,True,92
+scale,0.5,Leaning Tower of Pisa,False,7
+scale,0.5,Petra Treasury,False,6
+scale,0.5,Sydney Opera House,False,5
+scale,0.75,Angkor Wat,False,0
+scale,0.75,Big Ben,False,11
+scale,0.75,Burj Khalifa,False,7
+scale,0.75,Hagia Sophia,True,189
+scale,0.75,Leaning Tower of Pisa,False,7
+scale,0.75,Petra Treasury,False,0
+scale,0.75,Sydney Opera House,False,6
+scale,1.0,Angkor Wat,False,0
+scale,1.0,Big Ben,False,10
+scale,1.0,Burj Khalifa,False,0
+scale,1.0,Hagia Sophia,True,175
+scale,1.0,Leaning Tower of Pisa,False,7
+scale,1.0,Petra Treasury,False,7
+scale,1.0,Sydney Opera House,False,6
+scale,1.5,Angkor Wat,False,0
+scale,1.5,Big Ben,False,6
+scale,1.5,Burj Khalifa,False,6
+scale,1.5,Hagia Sophia,True,91
+scale,1.5,Leaning Tower of Pisa,False,5
+scale,1.5,Petra Treasury,False,7
+scale,1.5,Sydney Opera House,False,8
+brightness,0.15,Angkor Wat,False,0
+brightness,0.15,Big Ben,False,0
+brightness,0.15,Burj Khalifa,False,0
+brightness,0.15,Hagia Sophia,False,0
+brightness,0.15,Leaning Tower of Pisa,False,0
+brightness,0.15,Petra Treasury,False,0
+brightness,0.15,Sydney Opera House,False,0
+brightness,0.3,Angkor Wat,False,0
+brightness,0.3,Big Ben,False,5
+brightness,0.3,Burj Khalifa,False,0
+brightness,0.3,Hagia Sophia,True,56
+brightness,0.3,Leaning Tower of Pisa,False,5
+brightness,0.3,Petra Treasury,False,0
+brightness,0.3,Sydney Opera House,False,0
+brightness,0.5,Angkor Wat,False,0
+brightness,0.5,Big Ben,False,9
+brightness,0.5,Burj Khalifa,False,0
+brightness,0.5,Hagia Sophia,True,135
+brightness,0.5,Leaning Tower of Pisa,False,7
+brightness,0.5,Petra Treasury,False,0
+brightness,0.5,Sydney Opera House,True,6
+brightness,0.75,Angkor Wat,False,0
+brightness,0.75,Big Ben,True,10
+brightness,0.75,Burj Khalifa,False,0
+brightness,0.75,Hagia Sophia,True,178
+brightness,0.75,Leaning Tower of Pisa,False,7
+brightness,0.75,Petra Treasury,False,7
+brightness,0.75,Sydney Opera House,False,5
+brightness,1.0,Angkor Wat,False,0
+brightness,1.0,Big Ben,False,10
+brightness,1.0,Burj Khalifa,False,0
+brightness,1.0,Hagia Sophia,True,175
+brightness,1.0,Leaning Tower of Pisa,False,7
+brightness,1.0,Petra Treasury,False,7
+brightness,1.0,Sydney Opera House,False,6
+brightness,1.5,Angkor Wat,False,0
+brightness,1.5,Big Ben,False,10
+brightness,1.5,Burj Khalifa,False,6
+brightness,1.5,Hagia Sophia,True,145
+brightness,1.5,Leaning Tower of Pisa,False,0
+brightness,1.5,Petra Treasury,False,6
+brightness,1.5,Sydney Opera House,False,0

@@ -5,3 +5,9 @@ lab 5/.venv/
 lab 5/captures/
 lab 5/**/__pycache__/
 lab 5/demo/*.mp4
+
+# lab 6 additions
+lab assignment 2 - task 6/app/.cache/
+lab assignment 2 - task 6/.venv/
+__pycache__/
+.pytest_cache/

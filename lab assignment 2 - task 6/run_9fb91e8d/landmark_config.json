@@ -1,0 +1,43 @@
+{
+ "run_id": "9fb91e8d",
+ "database_id": "7c8207c1",
+ "landmarks": [
+  "Angkor Wat",
+  "Big Ben",
+  "Burj Khalifa",
+  "Hagia Sophia",
+  "Leaning Tower of Pisa",
+  "Petra Treasury",
+  "Sydney Opera House"
+ ],
+ "sift": {
+  "nfeatures": 1500,
+  "nOctaveLayers": 3,
+  "contrastThreshold": 0.04,
+  "edgeThreshold": 10,
+  "sigma": 1.6,
+  "max_side": 800
+ },
+ "ratio": 0.75,
+ "ransac": {
+  "reproj_threshold": 5.0,
+  "max_iters": 2000,
+  "confidence": 0.995,
+  "min_matches": 8
+ },
+ "verify_top_landmarks": 3,
+ "polygon": {
+  "min_area_frac": 0.005,
+  "max_area_frac": 25.0,
+  "max_side_ratio": 20.0,
+  "min_angle": 20.0,
+  "max_angle": 160.0
+ },
+ "thresholds": {
+  "t_good": 12,
+  "t_inliers": 6,
+  "margin": 1.5
+ },
+ "database_folder": "database",
+ "opencv_version": "4.14.0"
+}
