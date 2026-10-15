@@ -1,10 +1,9 @@
 # Landmark Recognition Using SIFT
 
 - **Author:** Adeel Asghar
-- **Notebook:** [`SIFT_Landmark_Recognition_Lab06.ipynb`](SIFT_Landmark_Recognition_Lab06.ipynb) (executed, outputs included)
+- **Notebook:** [`SIFT_Landmark_Recognition_Lab06_executed.ipynb`](SIFT_Landmark_Recognition_Lab06_executed.ipynb) (executed, outputs included)
 - **Photos:** 108 photos from Wikimedia Commons under free licences (author and licence of every photo in [`landmark_data/credits.csv`](landmark_data/credits.csv))
 - **Environment:** Google Colab, CPU pipeline (OpenCV 4.14.0, NumPy 2.1.3, pandas 2.2.3), run id `9fb91e8d`
-- **Study material:** [`STUDY_GUIDE.md`](STUDY_GUIDE.md) explains every concept and every step of the code in plain words, with viva questions
 
 This lab builds a landmark recognition system for a tourism information centre with the Scale-Invariant Feature Transform (SIFT). A database of 56 reference photos covers seven landmarks: Big Ben, Sydney Opera House, Leaning Tower of Pisa, Hagia Sophia, Burj Khalifa, Angkor Wat and Petra Treasury. A query photo is matched against every reference photo with a brute-force matcher (k = 2, Lowe's ratio test at 0.75), the best candidates are checked geometrically with a RANSAC homography, and a decision rule whose thresholds were measured on calibration data accepts or rejects the result. The building blocks work as designed: in the clearest case a Hagia Sophia photo has 210 reliable matches, 175 of them RANSAC inliers, and it is still recognised when rotated by 45 degrees, halved in size or darkened to 40% brightness. The system as a whole is weak. On 28 new photos of the known landmarks it recognises 5 (17.9%), never names a wrong landmark, and rejects 11 of 12 photos of unknown places. For most known photos the correct landmark collects no more RANSAC inliers than a wrong one does (calibration data: 0 to 10 against about 4 to 9), so a rule that is safe against wrong answers has to reject most of them.
 
@@ -570,10 +569,9 @@ Usage details, measured speed and screenshots are in [`app/README.md`](app/READM
 ## Appendix B: Repository Contents
 
 ```
-lab 6/
+lab assignment 2 - task 6/
 ├── README.md
-├── STUDY_GUIDE.md                                   concepts, code walk-through, viva questions
-├── SIFT_Landmark_Recognition_Lab06.ipynb            executed notebook (outputs included)
+├── SIFT_Landmark_Recognition_Lab06_executed.ipynb   executed notebook (outputs included)
 ├── assets/                                          figures used in this README (and app screenshots)
 ├── landmark_data/
 │   ├── database/<landmark>/                         56 reference photos
