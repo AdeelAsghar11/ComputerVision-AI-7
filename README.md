@@ -34,5 +34,11 @@ The repository is organized into the following task folders:
 - **Key Features**: Includes a fully interactive real-time Streamlit dashboard (`app.py`) with live webcam support and defect heatmaps.
 - **Key Files**: `app.py`, `NEU_SteelDefect_Lab05_HOG_Inspection.ipynb`
 
+### [Task 6: Landmark Recognition & Verification (SIFT & RANSAC)](lab%20assignment%202%20-%20task%206)
+- **Dataset**: Wikimedia Commons landmark dataset (7 reference landmarks, held-out known and unknown places)
+- **Focus**: SIFT feature detection and description, brute-force k-NN matching with Lowe's ratio test, candidate ranking, RANSAC homography geometric verification, bounding polygon projection, and decision rule calibration for open-set landmark recognition and rejection.
+- **Key Features**: Includes an interactive Streamlit web application (`app/app.py`), CLI recognition tool (`app/recognize_cli.py`), benchmark tools, and parity test suite.
+- **Key Files**: `app/app.py`, `SIFT_Landmark_Recognition_Lab06_executed.ipynb`, `README.md`
+
 ---
 *Author: Adeel Asghar*
