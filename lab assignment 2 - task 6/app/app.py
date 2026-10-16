@@ -15,6 +15,7 @@ import sys
 import time
 from pathlib import Path
 
+
 import cv2
 import gradio as gr
 import numpy as np
@@ -95,7 +96,7 @@ def _run_recognition(
     bgr = _load_bgr_from_gradio(img)
     if bgr is None:
         no = "Please upload a photo first."
-        return (no, None, None, None, None, None, None, no, None, no, 0, 0, 0, 0)
+        return (no, None, None, None, None, None, None, no, no, 0)
 
     thr = {"t_good": int(t_good), "t_inliers": int(t_inliers), "margin": float(margin)}
     result: RecognitionResult = _engine.recognize(bgr, thr=thr)
@@ -147,25 +148,17 @@ def _run_recognition(
         f"RANSAC {result.t_ransac:.2f} s)"
     )
 
-    ref_img = _to_rgb(result.ref_bgr)
-    n_good = cand["n_good"] if cand else 0
-    n_inliers = cand["n_inliers"] if cand else 0
-
     return (
-        banner,
-        _to_rgb(result.img_keypoints),    # Item 2: keypoints image
-        _to_rgb(result.img_matches),       # Item 3: match lines
-        result.report_text,               # Items 4-5-7: report text
-        _to_rgb(result.img_outline),       # Item 6: outline image
-        outline_msg,
-        tbl,
-        timing,
-        ref_img,                          # Best candidate reference photo
-        result.report_text,               # How it works tab detail
-        result.n_kp,
-        result.n_raw,
-        n_good,
-        n_inliers,
+        banner,                           # Item 1: verdict_html
+        _to_rgb(result.img_keypoints),    # Item 2: out_keypoints
+        _to_rgb(result.img_matches),      # Item 3: out_matches
+        result.report_text,               # Items 4-5-7: out_report
+        _to_rgb(result.img_outline),      # Item 6: out_outline
+        outline_msg,                      # out_outline_msg
+        tbl,                              # out_candidates
+        timing,                           # out_timing
+        result.report_text,               # How it works: how_report
+        result.n_kp,                      # How it works: how_kp
     )
 
 
