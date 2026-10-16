@@ -221,16 +221,15 @@ def _credits_summary() -> str:
 # Build the Gradio interface
 # ---------------------------------------------------------------------------
 
-with gr.Blocks(
-    title="Tourism Landmark Finder",
-    theme=gr.themes.Soft(primary_hue="teal"),
-    css="""
-    .verdict-box { border-radius: 8px; padding: 16px; margin-bottom: 8px; }
-    .timing-line { color: #888; font-size: 0.85em; margin-top: 8px; }
-    .threshold-warning { background: #fff3cd; color: #856404; padding: 8px 12px;
-                          border-radius: 6px; font-size: 0.85em; }
-    """,
-) as demo:
+_CSS = """
+.verdict-box { border-radius: 8px; padding: 16px; margin-bottom: 8px; }
+.timing-line { color: #888; font-size: 0.85em; margin-top: 8px; }
+.threshold-warning { background: #fff3cd; color: #856404; padding: 8px 12px;
+                      border-radius: 6px; font-size: 0.85em; }
+"""
+_THEME = gr.themes.Soft(primary_hue="teal")
+
+with gr.Blocks(title="Tourism Landmark Finder") as demo:
 
     gr.Markdown(
         "# Tourism Landmark Finder\n"
@@ -500,4 +499,6 @@ if __name__ == "__main__":
         server_port=7860,
         share=False,
         show_error=True,
+        theme=_THEME,
+        css=_CSS,
     )
