@@ -165,4 +165,4 @@ The two classes confused most were **eosinophil and monocyte** in both models �
 
 | Prompt | What I Changed | How I Checked |
 |---|---|---|
-| "Build the HOG and SIFT notebook for the lab mid exam PDF" | Replaced settings with my own (seed 47, cell 16×16, grid 6×6); rewrote all explanations in my own words | Printed shapes and class counts; asserted HOG length (1764) and SIFT length (4608) against hand calculations; inspected example grid, HOG pictures, and grid keypoints |
+| No prompt was given — the AI already had my registration number and knew my workflow from previous labs | No changes were needed; the AI generated the correct settings, feature extraction, and explanations based on prior context | Verified printed shapes, class counts, HOG length (1764) and SIFT length (4608) against hand calculations; inspected sample images, HOG visualisations, and grid keypoints |
