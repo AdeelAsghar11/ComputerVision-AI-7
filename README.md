@@ -40,5 +40,16 @@ The repository is organized into the following task folders:
 - **Key Features**: Includes an interactive Streamlit web application (`app/app.py`), CLI recognition tool (`app/recognize_cli.py`), benchmark tools, and parity test suite.
 - **Key Files**: `app/app.py`, `SIFT_Landmark_Recognition_Lab06_executed.ipynb`, `README.md`
 
+### [Task 8: Lab Mid Exam - HOG vs SIFT Comparison](lab%20mid%20-%20task%208)
+- **Dataset**: BloodMNIST dataset (eosinophil, monocyte, neutrophil, platelet)
+- **Focus**: Comparative study of HOG + SVM versus dense SIFT + SVM on blood-cell classification, evaluating feature representation, accuracy, and robustness across perturbations (rotation, noise, blur, illumination changes).
+- **Key Features**: Hand-calculated vs. code-verified HOG feature lengths, dense 6×6 SIFT grid extraction, linear SVM training, and comprehensive perturbation analysis.
+- **Key Files**: `FA23_BAI_047_Adeel_LabMid.ipynb`, `README.md`
+
+### [Lab 9: KilnPulse - Brick Kiln Activity Monitoring (Abstract & Intro)](lab%209%20-%20abstract%20and%20intro)
+- **Focus**: Multi-sensor satellite remote sensing (Sentinel-1 SAR radar, Sentinel-2 optical, Landsat 8/9 thermal) combined with Random Forest and Hidden Markov Models (HMM) to monitor individual brick kiln operational status across 12-day windows in Pakistan (Kasur and Sheikhupura districts).
+- **Key Features**: Overcomes optical smog/fog limitations using Sentinel-1 C-band radar backscatter; leverages Google Earth Engine for environmental compliance monitoring during winter smog shutdown orders.
+- **Key Files**: `kilnpulse_abstract_intro.pdf`, `README.md`
+
 ---
 *Author: Adeel Asghar*
